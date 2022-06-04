@@ -1,0 +1,25 @@
+
+
+setInterval (()=>{
+  d= new Date();
+  hr=d.getHours();
+  min =d.getMinutes();
+  sec=d.getSeconds();
+
+
+
+  hr_rotation=30*hr + min / 2 ;
+  min_rotation=6*min;
+  sec_rotation=6*sec;
+
+ hour= document.getElementById("hour_hand");
+ minute= document.getElementById("minute_hand");
+ sec= document.getElementById("second_hand");
+
+ hour.style.transform=`rotate(${hr_rotation}deg)`;
+ minute.style.transform=`rotate(${min_rotation}deg)`;
+ sec.style.transform=`rotate(${sec_rotation}deg)`;
+
+},1000);
+
+
